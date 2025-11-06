@@ -117,7 +117,7 @@ body {
 
 .nav-link.cta-button {
     background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
-    color: var(--color-black);
+    color: var(--color-black) !important;
     padding: 0.5rem 1.5rem;
     border-radius: 50px;
     font-weight: 600;
@@ -129,8 +129,17 @@ body {
 
 .nav-link.cta-button:hover {
     background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold));
+    color: var(--color-black) !important;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.nav-link.cta-button.active {
+    color: var(--color-black) !important;
+}
+
+.nav-link.cta-button.active::after {
+    display: none;
 }
 
 .menu-toggle {
@@ -799,9 +808,15 @@ body {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 3rem;
     margin-bottom: 3rem;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
 }
 
 .footer-brand p {
@@ -839,6 +854,17 @@ body {
     padding-top: 2rem;
     border-top: 1px solid rgba(212, 175, 55, 0.1);
     color: var(--color-text-light);
+}
+
+.footer-bottom a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.footer-bottom a:hover {
+    color: var(--color-gold);
 }
 
 /* ============================================
@@ -902,6 +928,11 @@ body {
     }
     
     .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-links {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
