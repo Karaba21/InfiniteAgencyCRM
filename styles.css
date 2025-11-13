@@ -506,16 +506,16 @@ body {
 }
 
 .pricing-card-starter {
-    border-color: var(--color-gold);
+    border-color: #b27100;
 }
 
 .pricing-card-plus {
     border-width: 3px;
-    border-color: #dc2626;
+    border-color: #9f9f9f;
 }
 
 .pricing-card-infinite {
-    border-color: #16a34a;
+    border-color: #edea29;
 }
 
 .pricing-card.featured {
