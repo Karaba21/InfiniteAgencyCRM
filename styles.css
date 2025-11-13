@@ -13,9 +13,9 @@
     --color-dark-gray: #1a1a1a;
     --color-gray: #2a2a2a;
     --color-light-gray: #3a3a3a;
-    --color-gold: #d4af37;
-    --color-gold-light: #f4d03f;
-    --color-gold-dark: #b8941e;
+    --color-gold: #FFD700;
+    --color-gold-light: #FFE135;
+    --color-gold-dark: #DAA520;
     --color-white: #ffffff;
     --color-text: #e0e0e0;
     --color-text-light: #b0b0b0;
@@ -984,5 +984,85 @@ body {
 
 .fade-in-up {
     animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* ============================================
+   WHATSAPP FLOATING BUTTON
+   ============================================ */
+.whatsapp-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    transition: var(--transition);
+    text-decoration: none;
+    color: var(--color-white);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+    background: linear-gradient(135deg, #128C7E, #25D366);
+}
+
+.whatsapp-button:active {
+    transform: scale(0.95);
+}
+
+.whatsapp-button svg {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(37, 211, 102, 0.8);
+    }
+    100% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .whatsapp-button {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .whatsapp-button svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-button {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .whatsapp-button svg {
+        width: 24px;
+        height: 24px;
+    }
 }
 
