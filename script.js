@@ -129,18 +129,43 @@ if (contactForm) {
         
         // Get form values
         const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            company: document.getElementById('company').value,
-            message: document.getElementById('message').value
+            name: document.getElementById('name').value.trim(),
+            email: document.getElementById('email').value.trim(),
+            company: document.getElementById('company').value.trim(),
+            message: document.getElementById('message').value.trim()
         };
         
-        // Here you would normally send the data to your server
-        // For now, we'll just show a success message
-        console.log('Form submitted:', formData);
+        // Validate required fields
+        if (!formData.name || !formData.email || !formData.message) {
+            showNotification('Por favor, completa todos los campos requeridos.', 'error');
+            return;
+        }
+        
+        // Build WhatsApp message
+        let whatsappMessage = `¡Hola! Me interesa conocer más sobre Infinite Agency CRM.\n\n`;
+        whatsappMessage += `*Nombre:* ${formData.name}\n`;
+        whatsappMessage += `*Email:* ${formData.email}\n`;
+        
+        if (formData.company) {
+            whatsappMessage += `*Empresa:* ${formData.company}\n`;
+        }
+        
+        whatsappMessage += `\n*Mensaje:*\n${formData.message}`;
+        
+        // Encode message for URL
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+        
+        // WhatsApp number (same as the floating button)
+        const whatsappNumber = '59896671516';
+        
+        // Create WhatsApp URL
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        
+        // Open WhatsApp in new tab
+        window.open(whatsappUrl, '_blank');
         
         // Show success message
-        showNotification('¡Mensaje enviado! Nos pondremos en contacto contigo pronto.', 'success');
+        showNotification('¡Redirigiendo a WhatsApp! Completa el envío del mensaje allí.', 'success');
         
         // Reset form
         contactForm.reset();
