@@ -298,6 +298,47 @@ document.querySelectorAll('.stat-item').forEach(stat => {
 });
 
 // ============================================
+// PRICING TOGGLE FUNCTIONALITY
+// ============================================
+const pricingToggle = document.getElementById('pricingToggle');
+const priceAmounts = document.querySelectorAll('.price-amount');
+const pricePeriods = document.querySelectorAll('.price-period');
+const annualBenefits = document.querySelectorAll('.annual-benefit');
+
+if (pricingToggle) {
+    pricingToggle.addEventListener('change', function() {
+        const isAnnual = this.checked;
+        
+        priceAmounts.forEach(priceElement => {
+            const monthlyPrice = priceElement.getAttribute('data-monthly');
+            const annualPrice = priceElement.getAttribute('data-annual');
+            
+            if (isAnnual) {
+                priceElement.textContent = `$${annualPrice}`;
+            } else {
+                priceElement.textContent = `$${monthlyPrice}`;
+            }
+        });
+        
+        pricePeriods.forEach(periodElement => {
+            if (isAnnual) {
+                periodElement.textContent = 'USD Al Año';
+            } else {
+                periodElement.textContent = 'USD Al Mes';
+            }
+        });
+        
+        annualBenefits.forEach(benefitElement => {
+            if (isAnnual) {
+                benefitElement.style.display = 'block';
+            } else {
+                benefitElement.style.display = 'none';
+            }
+        });
+    });
+}
+
+// ============================================
 // PRICING CARD HOVER EFFECTS
 // ============================================
 document.querySelectorAll('.pricing-card').forEach(card => {
