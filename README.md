@@ -1,25 +1,36 @@
-# Infinite Agency CRM
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## 🌐 Sitio Web
+## Getting Started
 
-Esta landing page está disponible en: **https://infiniteagencycrm.com**
+First, run the development server:
 
-## 📄 ¿Qué es esto?
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Esta es una **landing page** para Infinite Agency CRM, una plataforma que ofrece soluciones CRM completamente personalizadas para empresas.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Una landing page es una página web diseñada con un propósito específico: presentar de manera clara y atractiva los servicios de Infinite Agency CRM, destacando los beneficios, planes disponibles y facilitando el contacto con potenciales clientes.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## ✨ Características
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-- Diseño moderno y responsive
-- Información sobre servicios CRM personalizados
-- Sección de planes y precios
-- Formulario de contacto
-- Navegación intuitiva
+## Learn More
 
-## 🛠️ Tecnologías
+To learn more about Next.js, take a look at the following resources:
 
-- HTML5
-- CSS3
-- JavaScript
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
