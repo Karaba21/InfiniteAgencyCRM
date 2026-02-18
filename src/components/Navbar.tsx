@@ -72,7 +72,7 @@ export default function Navbar() {
                     <li><a href="#servicios" className="nav-link" onClick={(e) => handleLinkClick(e, "#servicios")}>Servicios</a></li>
                     <li><a href="#que-hacemos" className="nav-link" onClick={(e) => handleLinkClick(e, "#que-hacemos")}>Qué Hacemos</a></li>
                     <li><a href="#beneficios" className="nav-link" onClick={(e) => handleLinkClick(e, "#beneficios")}>Beneficios</a></li>
-                    <li><a href="#planes" className="nav-link" onClick={(e) => handleLinkClick(e, "#planes")}>Planes</a></li>
+                    <li><a href="#planes" className="nav-link" onClick={(e) => handleLinkClick(e, "#planes")}>Costos</a></li>
                     <li><a href="#quienes-somos" className="nav-link" onClick={(e) => handleLinkClick(e, "#quienes-somos")}>Quiénes Somos</a></li>
                     <li><a href="#contacto" className="nav-link cta-button" onClick={(e) => handleLinkClick(e, "#contacto")}>Contacto</a></li>
                 </ul>

@@ -59,11 +59,6 @@ export default function About() {
                                 permitiendo que empresas de todos los tamaños puedan ofrecer soluciones
                                 de clase mundial sin la necesidad de desarrollar desde cero.
                             </p>
-                            <p>
-                                Con años de experiencia en personalización de plataformas y desarrollo
-                                de marca blanca, trabajamos incansablemente para que tu CRM sea único,
-                                reflejando perfectamente la identidad y valores de tu empresa.
-                            </p>
                         </div>
                         <div className="about-stats">
                             <div className="stat-item">
