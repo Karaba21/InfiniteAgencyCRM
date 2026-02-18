@@ -6,7 +6,7 @@ export default function Benefits() {
                     <span className="section-tag">Ventajas Competitivas</span>
                     <h2 className="section-title">Beneficios de Nuestro CRM</h2>
                     <p className="section-description">
-                        Descubre por qué elegir nuestra solución de marca blanca es la mejor decisión para tu empresa
+                        Descubre por qué te conviene elegirnos
                     </p>
                 </div>
                 <div className="benefits-grid">

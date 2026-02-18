@@ -41,7 +41,7 @@ export default function Hero() {
                     </h1>
                     <p className="hero-subtitle">
                         Soluciones CRM completamente personalizadas.
-                        Tu marca, tu experiencia, sin que tus clientes sepan que existe otra tecnología detrás.
+                        Tu empresa 100% automatizada
                     </p>
                     <div className="hero-buttons">
                         <a href="#planes" className="btn btn-primary" onClick={(e) => handleLinkClick(e, "#planes")}>Ver Planes</a>

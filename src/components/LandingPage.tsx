@@ -12,6 +12,7 @@ import About from "./About";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import WhatsAppButton from "./WhatsAppButton";
+import Savings from "./Savings";
 
 export default function LandingPage() {
     // Intersection Observer for animations
@@ -49,10 +50,11 @@ export default function LandingPage() {
             <Navbar />
             <Hero />
             <ImpactStats />
-            <Services />
             <Features />
+            <Services />
             <Benefits />
             <Pricing />
+            <Savings />
             <About />
             <Contact />
             <Footer />
