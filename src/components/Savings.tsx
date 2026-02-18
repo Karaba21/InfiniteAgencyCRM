@@ -43,9 +43,9 @@ export default function Savings() {
                         <tbody>
                             {services.map((service, index) => (
                                 <tr key={index}>
-                                    <td className="service-name">{service.name}</td>
-                                    <td className="competitors-list">{service.competitors}</td>
-                                    <td>
+                                    <td className="service-name" data-label="Funcionalidad">{service.name}</td>
+                                    <td className="competitors-list" data-label="Herramientas Tradicionales">{service.competitors}</td>
+                                    <td data-label="Infinite Agency CRM">
                                         <div className="infinite-check">
                                             <div className="check-circle">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">

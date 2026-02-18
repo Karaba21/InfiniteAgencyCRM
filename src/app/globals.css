@@ -339,6 +339,23 @@ body {
     pointer-events: none;
 }
 
+.section-yellow {
+    background-color: #FFC847;
+    color: var(--color-black);
+}
+
+.section-yellow .section-title {
+    color: var(--color-black);
+}
+
+.section-yellow .section-description {
+    color: #333333;
+}
+
+.section-yellow .section-tag {
+    color: var(--color-dark);
+}
+
 .section-header {
     text-align: center;
     margin-bottom: 4rem;
@@ -1221,6 +1238,18 @@ body {
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Initial state for elements to be animated */
 .fade-in-up-init {
     opacity: 0;
@@ -1490,5 +1519,104 @@ body {
 @media (max-width: 480px) {
     .impact-stat {
         flex: 1 1 100%;
+    }
+}
+
+/* ============================================
+   RESPONSIVE SERVICES TABLE 
+   ============================================ */
+@media (max-width: 768px) {
+    .services-table-container {
+        overflow-x: visible;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        margin-top: 2rem;
+    }
+
+    .services-table {
+        min-width: 100%;
+        display: block;
+    }
+
+    .services-table thead {
+        display: none;
+    }
+
+    .services-table tbody {
+        display: block;
+        width: 100%;
+    }
+
+    .services-table tr {
+        display: block;
+        background: var(--color-dark-gray);
+        margin-bottom: 2rem;
+        border-radius: 20px;
+        padding: 2rem 1.5rem;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .services-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        text-align: right;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        width: 100%;
+    }
+
+    .services-table td:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-top: 0.5rem;
+    }
+
+    .services-table td:first-child {
+        padding-top: 0;
+    }
+
+    .services-table td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        color: var(--color-gold);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: left;
+        flex: 0 0 45%;
+        padding-right: 1rem;
+    }
+
+    .competitors-list {
+        text-align: right;
+        flex: 1;
+        color: var(--color-text-light);
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    .service-name {
+        text-align: right;
+        flex: 1;
+        color: var(--color-white);
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+
+    .infinite-check {
+        width: 100%;
+        justify-content: flex-end;
+        flex: 1;
+    }
+
+    /* Ensure check circle is visible */
+    .check-circle {
+        background: rgba(212, 175, 55, 0.2);
+        color: var(--color-gold);
+        width: 35px;
+        height: 35px;
     }
 }

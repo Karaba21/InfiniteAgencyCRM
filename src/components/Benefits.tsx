@@ -1,6 +1,6 @@
 export default function Benefits() {
     return (
-        <section id="beneficios" className="section section-dark">
+        <section id="beneficios" className="section section-yellow">
             <div className="container">
                 <div className="section-header">
                     <span className="section-tag">Ventajas Competitivas</span>

@@ -69,8 +69,8 @@ export default function Navbar() {
                 </div>
                 <ul className={`nav-menu ${isMenuOpen ? "active" : ""}`} id="navMenu">
                     <li><a href="#inicio" className="nav-link" onClick={(e) => handleLinkClick(e, "#inicio")}>Inicio</a></li>
-                    <li><a href="#servicios" className="nav-link" onClick={(e) => handleLinkClick(e, "#servicios")}>Servicios</a></li>
                     <li><a href="#que-hacemos" className="nav-link" onClick={(e) => handleLinkClick(e, "#que-hacemos")}>Qué Hacemos</a></li>
+                    <li><a href="#servicios" className="nav-link" onClick={(e) => handleLinkClick(e, "#servicios")}>Servicios</a></li>
                     <li><a href="#beneficios" className="nav-link" onClick={(e) => handleLinkClick(e, "#beneficios")}>Beneficios</a></li>
                     <li><a href="#planes" className="nav-link" onClick={(e) => handleLinkClick(e, "#planes")}>Costos</a></li>
                     <li><a href="#savings" className="nav-link" onClick={(e) => handleLinkClick(e, "#savings")}>Ahorros</a></li>
