@@ -6,8 +6,46 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.infiniteagencycrm.com'),
   title: "Infinite Agency CRM - Soluciones CRM Personalizadas",
   description: "Soluciones CRM completamente personalizadas. Tu marca, tu experiencia, sin que tus clientes sepan que existe otra tecnología detrás.",
+  keywords: ["CRM", "CRM Personalizado", "Infinite Agency CRM", "Software de gestión de clientes", "Marca blanca", "Agencia Infinite"],
+  authors: [{ name: "Infinite Agency CRM" }],
+  openGraph: {
+    type: "website",
+    locale: "es_ES",
+    url: "/",
+    title: "Infinite Agency CRM - Soluciones CRM Personalizadas",
+    description: "Soluciones CRM completamente personalizadas. Tu marca, tu experiencia, sin que tus clientes sepan que existe otra tecnología detrás.",
+    siteName: "Infinite Agency CRM",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Infinite Agency CRM - Soluciones CRM Personalizadas",
+    description: "Soluciones CRM completamente personalizadas. Tu marca, tu experiencia, sin que tus clientes sepan que existe otra tecnología detrás.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  icons: {
+    icon: [
+      { url: "/favicon_io/favicon.ico" },
+      { url: "/favicon_io/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon_io/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/favicon_io/apple-touch-icon.png" }
+    ],
+  },
+  manifest: "/favicon_io/site.webmanifest",
 };
 
 export default function RootLayout({

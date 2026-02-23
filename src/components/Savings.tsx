@@ -2,21 +2,20 @@
 
 export default function Savings() {
     const services = [
-        { name: "CRM & Pipeline Management", competitors: "HubSpot, Salesforce" },
-        { name: "Unlimited Sales Funnels", competitors: "ClickFunnels, Leadpages" },
-        { name: "Website Builder", competitors: "WordPress, Wix, Squarespace" },
-        { name: "Surveys & Forms", competitors: "Typeform, JotForm" },
-        { name: "Email Marketing", competitors: "Mailchimp, ActiveCampaign" },
-        { name: "2-Way SMS Marketing", competitors: "Podium, Twilio" },
-        { name: "Booking & Appointments", competitors: "Calendly, Acuity" },
-        { name: "Workflow Automations", competitors: "Zapier, Make" },
-        { name: "Courses/Products", competitors: "Kajabi, Teachable" },
-        { name: "Call Tracking", competitors: "CallRail" },
-        { name: "Reputation Management", competitors: "BirdEye, Yext" },
-        { name: "Tracking & Analytics", competitors: "Google Analytics, Mixpanel" },
-        { name: "Communities", competitors: "Skool, Circle" },
-        { name: "Document Signing", competitors: "DocuSign, PandaDoc" },
-        { name: "Gray-Labeled Mobile App", competitors: "Custom Development" },
+        { name: "CRM & Pipeline Management", competitors: "HubSpot, Salesforce", cost: "$99/mes" },
+        { name: "Unlimited Sales Funnels", competitors: "ClickFunnels, Leadpages", cost: "$297/mes" },
+        { name: "Website Builder", competitors: "WordPress, Wix, Squarespace", cost: "$29/mes" },
+        { name: "Surveys & Forms", competitors: "Typeform, JotForm", cost: "$49/mes" },
+        { name: "Email Marketing", competitors: "Mailchimp, ActiveCampaign", cost: "$99/mes" },
+        { name: "2-Way SMS Marketing", competitors: "Podium, Twilio", cost: "$99/mes" },
+        { name: "Booking & Appointments", competitors: "Calendly, Acuity", cost: "$29/mes" },
+        { name: "Workflow Automations", competitors: "Zapier, Make", cost: "$169/mes" },
+        { name: "Courses/Products", competitors: "Kajabi, Teachable", cost: "$99/mes" },
+        { name: "Call Tracking", competitors: "CallRail", cost: "$49/mes" },
+        { name: "Reputation Management", competitors: "BirdEye, Yext", cost: "$159/mes" },
+        { name: "Tracking & Analytics", competitors: "Google Analytics, Mixpanel", cost: "$299/mes" },
+        { name: "Communities", competitors: "Skool, Circle", cost: "$89/mes" },
+        { name: "Document Signing", competitors: "DocuSign, PandaDoc", cost: "$47/mes" },
     ];
 
     return (
@@ -37,6 +36,7 @@ export default function Savings() {
                             <tr>
                                 <th>Funcionalidad</th>
                                 <th className="center-align">Herramientas Tradicionales</th>
+                                <th className="center-align">Otras Herramientas</th>
                                 <th className="center-align" style={{ color: 'var(--color-gold)' }}>Infinite Agency CRM</th>
                             </tr>
                         </thead>
@@ -44,7 +44,8 @@ export default function Savings() {
                             {services.map((service, index) => (
                                 <tr key={index}>
                                     <td className="service-name" data-label="Funcionalidad">{service.name}</td>
-                                    <td className="competitors-list" data-label="Herramientas Tradicionales">{service.competitors}</td>
+                                    <td className="competitors-list center-align" data-label="Herramientas Tradicionales">{service.competitors}</td>
+                                    <td className="cost-list center-align" data-label="Otras Herramientas" style={{ fontWeight: 'bold' }}>{service.cost}</td>
                                     <td data-label="Infinite Agency CRM">
                                         <div className="infinite-check">
                                             <div className="check-circle">
@@ -62,7 +63,7 @@ export default function Savings() {
 
                 <div className="savings-highlight">
                     <p className="savings-text">
-                        * Ahorra más de <span className="savings-amount">$1,000/mes</span> consolidando tus herramientas.
+                        * Ahorra más de <span className="savings-amount">$1,500/mes</span> consolidando tus herramientas.
                     </p>
                 </div>
             </div>

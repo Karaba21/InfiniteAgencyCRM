@@ -1377,7 +1377,8 @@ body {
     border-bottom: 2px solid rgba(212, 175, 55, 0.2);
 }
 
-.services-table th.center-align {
+.services-table th.center-align,
+.services-table td.center-align {
     text-align: center;
 }
 

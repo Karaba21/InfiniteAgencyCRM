@@ -156,6 +156,33 @@ export default function Services() {
         setActiveIndex((prev) => (prev - 1 + totalPages) % totalPages);
     };
 
+    const [touchStart, setTouchStart] = useState<number | null>(null);
+    const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+    const minSwipeDistance = 50;
+
+    const handleTouchStart = (e: any) => {
+        setTouchEnd(null);
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchMove = (e: any) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > minSwipeDistance;
+        const isRightSwipe = distance < -minSwipeDistance;
+
+        if (isLeftSwipe) {
+            nextSlide();
+        } else if (isRightSwipe) {
+            prevSlide();
+        }
+    };
+
     const currentServices = services.slice(
         activeIndex * itemsPerPage,
         (activeIndex + 1) * itemsPerPage
@@ -167,9 +194,9 @@ export default function Services() {
 
                 <div className="section-header">
                     <span className="section-tag" style={{ color: 'var(--color-gold)' }}>NUESTRO SERVICIO</span>
-                    <h2 className="section-title">Servicios</h2>
+                    <h2 className="section-title">Servicios de nuestro CRM</h2>
                     <p className="section-description">
-                        Transformamos plataformas CRM existentes en soluciones completamente personalizadas bajo tu marca
+                        Con Infinite Agency CRM las posibilidades son infinitas
                     </p>
                 </div>
 
@@ -198,12 +225,15 @@ export default function Services() {
                 </button>
 
                 <div
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
                     style={{
                         display: 'grid',
                         gridTemplateColumns: `repeat(${itemsPerPage}, 1fr)`,
                         gap: '2rem',
                         transition: 'opacity 0.5s ease-in-out',
-                        minHeight: '300px',
+                        minHeight: isMobile ? '200px' : '300px',
                         alignItems: 'start'
                     }}
                 >
@@ -269,7 +299,7 @@ export default function Services() {
                 </button>
 
                 {/* Pagination Dots */}
-                <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '3rem', marginBottom: '3rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: isMobile ? '1.5rem' : '3rem', marginBottom: '3rem' }}>
                     {Array.from({ length: totalPages }).map((_, idx) => (
                         <button
                             key={idx}
@@ -294,8 +324,9 @@ export default function Services() {
                         href="#contacto"
                         className="btn btn-primary"
                         style={{
-                            fontSize: '1.2rem',
-                            padding: '1rem 3rem'
+                            fontSize: isMobile ? '1rem' : '1.2rem',
+                            padding: isMobile ? '0.8rem 2rem' : '1rem 3rem',
+                            whiteSpace: 'nowrap'
                         }}
                     >
                         Comenza Ahora

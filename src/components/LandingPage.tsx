@@ -5,7 +5,6 @@ import Navbar from "./Navbar";
 import Hero from "./Hero";
 import ImpactStats from "./ImpactStats";
 import Services from "./Services";
-import Features from "./Features";
 import Benefits from "./Benefits";
 import Pricing from "./Pricing";
 import About from "./About";
@@ -13,6 +12,7 @@ import Contact from "./Contact";
 import Footer from "./Footer";
 import WhatsAppButton from "./WhatsAppButton";
 import Savings from "./Savings";
+import AIFeatures from "./AIFeatures";
 
 export default function LandingPage() {
     // Intersection Observer for animations
@@ -34,7 +34,7 @@ export default function LandingPage() {
         }, observerOptions);
 
         const elementsToAnimate = document.querySelectorAll(
-            ".feature-card, .benefit-card, .pricing-card, .section-header, .about-text, .about-visual, .contact-content, .services-table"
+            ".feature-card, .ai-feature-card, .benefit-card, .pricing-card, .section-header, .about-text, .about-visual, .contact-content, .services-table"
         );
 
         elementsToAnimate.forEach((el) => {
@@ -50,8 +50,8 @@ export default function LandingPage() {
             <Navbar />
             <Hero />
             <ImpactStats />
-            <Features />
             <Services />
+            <AIFeatures />
             <Benefits />
             <Pricing />
             <Savings />
