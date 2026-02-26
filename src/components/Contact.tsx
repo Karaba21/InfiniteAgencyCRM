@@ -61,7 +61,7 @@ export default function Contact() {
                             </div>
                             <div>
                                 <h4>Teléfono</h4>
-                                <p>+1 (555) 123-4567</p>
+                                <p>+598 96 671 516</p>
                             </div>
                         </div>
                     </div>
