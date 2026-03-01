@@ -74,7 +74,6 @@ export default function Navbar() {
                     <li><a href="#beneficios" className="nav-link" onClick={(e) => handleLinkClick(e, "#beneficios")}>Beneficios</a></li>
                     <li><a href="#planes" className="nav-link" onClick={(e) => handleLinkClick(e, "#planes")}>Costos</a></li>
                     <li><a href="#savings" className="nav-link" onClick={(e) => handleLinkClick(e, "#savings")}>Ahorros</a></li>
-                    <li><a href="#quienes-somos" className="nav-link" onClick={(e) => handleLinkClick(e, "#quienes-somos")}>Quiénes Somos</a></li>
                     <li><a href="#contacto" className="nav-link cta-button" onClick={(e) => handleLinkClick(e, "#contacto")}>Contacto</a></li>
                 </ul>
                 <button className="menu-toggle" id="menuToggle" onClick={toggleMenu}>
