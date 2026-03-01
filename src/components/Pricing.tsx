@@ -29,25 +29,24 @@ export default function Pricing() {
                     </p>
                 </div>
 
-                <div className="pricing-toggle-container">
+                {/* <div className="pricing-toggle-container">
                     <span className="toggle-label">Mensual</span>
                     <label className="pricing-toggle">
                         <input type="checkbox" id="pricingToggle" checked={isAnnual} onChange={() => setIsAnnual(!isAnnual)} />
                         <span className="toggle-slider"></span>
                     </label>
                     <span className="toggle-label">Anual <span style={{ color: '#22c55e', fontSize: '0.8rem', marginLeft: '5px' }}>Ahorra 16%</span></span>
-                </div>
+                </div> */}
 
                 <div className="pricing-grid" style={{ gridTemplateColumns: '1fr', marginTop: '2rem' }}>
                     <div className="pricing-card pricing-card-plus featured" style={{ padding: '2.5rem 2rem', transform: 'none' }}>
                         <div className="pricing-header">
                             <div className="pricing-price">
-                                <span className="price-amount">{isAnnual ? "$4990" : "$499"}</span>
-                                <span className="price-period">{isAnnual ? "USD / Año" : "USD / Mes"}</span>
+                                <span className="price-amount" style={{ fontSize: '2.5rem' }}>Precio a convenir</span>
                             </div>
-                            <div className="annual-benefit" style={{ display: isAnnual ? "block" : "none", marginTop: '1rem' }}>
+                            {/* <div className="annual-benefit" style={{ display: isAnnual ? "block" : "none", marginTop: '1rem' }}>
                                 <span className="benefit-text" style={{ fontSize: '0.9rem', padding: '0.4rem 1rem', background: 'rgba(34, 197, 94, 0.1)', borderRadius: '20px' }}>¡2 MESES GRATIS!</span>
-                            </div>
+                            </div> */}
                         </div>
 
                         <p className="pricing-description" style={{ textAlign: 'center', fontSize: '1.1rem', marginBottom: '2.5rem' }}>

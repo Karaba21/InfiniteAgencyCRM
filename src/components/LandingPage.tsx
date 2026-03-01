@@ -55,7 +55,6 @@ export default function LandingPage() {
             <Benefits />
             <Pricing />
             <Savings />
-            <About />
             <Contact />
             <Footer />
             <WhatsAppButton />
