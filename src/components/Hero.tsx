@@ -36,12 +36,11 @@ export default function Hero() {
             <div className="container">
                 <div className="hero-content">
                     <h1 className="hero-title">
-                        <span className="gradient-text">CRM Personalizado</span>
-                        <br />para tu Empresa
+                        <span className="gradient-text">Convertí WhatsApp</span>
+                        <br />en tu mejor vendedor
                     </h1>
                     <p className="hero-subtitle">
-                        Soluciones CRM completamente personalizadas.
-                        Tu empresa 100% automatizada
+                        Automatizá atención, turnos y seguimientos desde WhatsApp 24/7 <br /> Y mucho más 
                     </p>
                     <div className="hero-buttons">
                         <a href="#planes" className="btn btn-primary" onClick={(e) => handleLinkClick(e, "#planes")}>Ver Planes</a>

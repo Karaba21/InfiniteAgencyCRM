@@ -76,7 +76,7 @@ const services = [
     },
     {
         title: "Creador de Páginas Web",
-        description: "Crea páginas web en minutos. Te damos más de 1,000 plantillas para editar y publicar.",
+        description: "Crea páginas web en minutos. Más de 1,000 plantillas para editar y publicar.",
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
@@ -190,113 +190,119 @@ export default function Services() {
 
     return (
         <section id="servicios" className="section section-dark">
-            <div className="container" style={{ position: 'relative', maxWidth: '1400px', margin: '0 auto', padding: '0 80px' }}>
+            <div className="container" style={{ position: 'relative', maxWidth: '1400px', margin: '0 auto', padding: isMobile ? '0 20px' : '0 80px' }}>
 
                 <div className="section-header">
-                    <span className="section-tag" style={{ color: 'var(--color-gold)' }}>NUESTRO SERVICIO</span>
+                    <span className="section-tag">NUESTRO SERVICIO</span>
                     <h2 className="section-title">Servicios de nuestro CRM</h2>
                     <p className="section-description">
                         Con Infinite Agency CRM las posibilidades son infinitas
                     </p>
                 </div>
 
-                {/* Navigation Arrows */}
-                <button
-                    onClick={prevSlide}
-                    style={{
-                        position: 'absolute',
-                        left: '20px',
-                        top: '50%',
-                        transform: 'translateY(-100%)',
-                        background: 'transparent',
-                        border: 'none',
-                        color: 'var(--color-gold)',
-                        cursor: 'pointer',
-                        zIndex: 10,
-                        padding: '10px',
-                        transition: 'var(--transition)'
-                    }}
-                    onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-100%) scale(1.1)'}
-                    onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(-100%) scale(1)'}
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" style={{ width: '30px', height: '30px' }}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                    </svg>
-                </button>
-
-                <div
-                    onTouchStart={handleTouchStart}
-                    onTouchMove={handleTouchMove}
-                    onTouchEnd={handleTouchEnd}
-                    style={{
-                        display: 'grid',
-                        gridTemplateColumns: `repeat(${itemsPerPage}, 1fr)`,
-                        gap: '2rem',
-                        transition: 'opacity 0.5s ease-in-out',
-                        minHeight: isMobile ? '200px' : '300px',
-                        alignItems: 'start'
-                    }}
-                >
-                    {currentServices.map((service, index) => (
-                        <div
-                            key={`${activeIndex}-${index}`}
+                <div style={{ position: 'relative' }}>
+                    {/* Navigation Arrows */}
+                    {!isMobile && (
+                        <button
+                            onClick={prevSlide}
                             style={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center',
-                                textAlign: 'center',
-                                padding: '0 1rem',
-                                animation: 'fadeIn 0.5s ease-out'
+                                position: 'absolute',
+                                left: '-50px',
+                                top: '50%',
+                                transform: 'translateY(-50%)',
+                                background: 'transparent',
+                                border: 'none',
+                                color: 'var(--color-gold)',
+                                cursor: 'pointer',
+                                zIndex: 10,
+                                padding: '10px',
+                                transition: 'var(--transition)'
                             }}
+                            onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)'}
+                            onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(-50%) scale(1)'}
                         >
-                            <div style={{ marginBottom: '1.5rem', color: 'var(--color-gold)' }}>
-                                <div style={{ width: '50px', height: '50px' }}>
-                                    {service.icon}
-                                </div>
-                            </div>
-                            <h3 style={{
-                                fontSize: '1.25rem',
-                                fontWeight: '700',
-                                marginBottom: '1rem',
-                                lineHeight: '1.2',
-                                color: 'var(--color-white)'
-                            }}>
-                                {service.title}
-                            </h3>
-                            <p style={{
-                                color: 'var(--color-text-light)',
-                                fontSize: '0.9rem',
-                                lineHeight: '1.6',
-                                maxWidth: '250px'
-                            }}>
-                                {service.description}
-                            </p>
-                        </div>
-                    ))}
-                </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" style={{ width: '30px', height: '30px' }}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                            </svg>
+                        </button>
+                    )}
 
-                <button
-                    onClick={nextSlide}
-                    style={{
-                        position: 'absolute',
-                        right: '20px',
-                        top: '50%',
-                        transform: 'translateY(-100%)',
-                        background: 'transparent',
-                        border: 'none',
-                        color: 'var(--color-gold)',
-                        cursor: 'pointer',
-                        zIndex: 10,
-                        padding: '10px',
-                        transition: 'var(--transition)'
-                    }}
-                    onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-100%) scale(1.1)'}
-                    onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(-100%) scale(1)'}
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" style={{ width: '30px', height: '30px' }}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                    </svg>
-                </button>
+                    <div
+                        onTouchStart={handleTouchStart}
+                        onTouchMove={handleTouchMove}
+                        onTouchEnd={handleTouchEnd}
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: `repeat(${itemsPerPage}, 1fr)`,
+                            gap: '2rem',
+                            transition: 'opacity 0.5s ease-in-out',
+                            minHeight: isMobile ? '200px' : '300px',
+                            alignItems: 'start'
+                        }}
+                    >
+                        {currentServices.map((service, index) => (
+                            <div
+                                key={`${activeIndex}-${index}`}
+                                style={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: 'center',
+                                    textAlign: 'center',
+                                    padding: '0 1rem',
+                                    animation: 'fadeIn 0.5s ease-out'
+                                }}
+                            >
+                                <div style={{ marginBottom: '1.5rem', color: 'var(--color-gold)' }}>
+                                    <div style={{ width: '50px', height: '50px' }}>
+                                        {service.icon}
+                                    </div>
+                                </div>
+                                <h3 style={{
+                                    fontSize: '1.25rem',
+                                    fontWeight: '700',
+                                    marginBottom: '1rem',
+                                    lineHeight: '1.2',
+                                    color: 'var(--color-black)'
+                                }}>
+                                    {service.title}
+                                </h3>
+                                <p style={{
+                                    color: 'var(--color-text-light)',
+                                    fontSize: '0.9rem',
+                                    lineHeight: '1.6',
+                                    maxWidth: '250px'
+                                }}>
+                                    {service.description}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+
+                    {!isMobile && (
+                        <button
+                            onClick={nextSlide}
+                            style={{
+                                position: 'absolute',
+                                right: '-50px',
+                                top: '50%',
+                                transform: 'translateY(-50%)',
+                                background: 'transparent',
+                                border: 'none',
+                                color: 'var(--color-gold)',
+                                cursor: 'pointer',
+                                zIndex: 10,
+                                padding: '10px',
+                                transition: 'var(--transition)'
+                            }}
+                            onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)'}
+                            onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(-50%) scale(1)'}
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" style={{ width: '30px', height: '30px' }}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+                    )}
+                </div>
 
                 {/* Pagination Dots */}
                 <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: isMobile ? '1.5rem' : '3rem', marginBottom: '3rem' }}>
@@ -309,7 +315,7 @@ export default function Services() {
                                 height: '12px',
                                 borderRadius: '50%',
                                 border: 'none',
-                                backgroundColor: activeIndex === idx ? 'var(--color-gold)' : 'rgba(255,255,255,0.2)',
+                                backgroundColor: activeIndex === idx ? 'var(--color-gold)' : 'rgba(0,0,0,0.15)',
                                 cursor: 'pointer',
                                 padding: 0,
                                 transition: 'var(--transition)'

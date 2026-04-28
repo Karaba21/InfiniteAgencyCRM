@@ -8,17 +8,17 @@
 }
 
 :root {
-    --color-black: #000000;
-    --color-dark: #0a0a0a;
-    --color-dark-gray: #1a1a1a;
-    --color-gray: #2a2a2a;
-    --color-light-gray: #3a3a3a;
-    --color-gold: #FFD700;
-    --color-gold-light: #FFE135;
-    --color-gold-dark: #DAA520;
+    --color-black: #111111;
+    --color-dark: #1a1a1a;
+    --color-dark-gray: #ffffff;
+    --color-gray: #f5f5f5;
+    --color-light-gray: #e8e8e8;
+    --color-gold: #F97316;
+    --color-gold-light: #FB923C;
+    --color-gold-dark: #EA580C;
     --color-white: #ffffff;
-    --color-text: #e0e0e0;
-    --color-text-light: #b0b0b0;
+    --color-text: #1a1a1a;
+    --color-text-light: #555555;
 
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
@@ -32,7 +32,7 @@ html {
 
 body {
     font-family: var(--font-primary);
-    background-color: var(--color-black);
+    background-color: var(--color-white);
     color: var(--color-text);
     line-height: 1.6;
     overflow-x: hidden;
@@ -52,9 +52,9 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     z-index: 1000;
     padding: 1rem 0;
     transition: var(--transition);
@@ -69,11 +69,11 @@ body {
 .nav-brand {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-white);
+    color: var(--color-black);
 }
 
 .brand-text {
-    color: var(--color-white);
+    color: var(--color-black);
 }
 
 .brand-accent {
@@ -89,7 +89,7 @@ body {
 }
 
 .nav-link {
-    color: var(--color-text);
+    color: #333333;
     text-decoration: none;
     font-weight: 500;
     transition: var(--transition);
@@ -117,7 +117,7 @@ body {
 
 .nav-link.cta-button {
     background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
-    color: var(--color-black) !important;
+    color: var(--color-white) !important;
     padding: 0.5rem 1.5rem;
     border-radius: 50px;
     font-weight: 600;
@@ -129,13 +129,13 @@ body {
 
 .nav-link.cta-button:hover {
     background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold));
-    color: var(--color-black) !important;
+    color: var(--color-white) !important;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 5px 15px rgba(249, 115, 22, 0.3);
 }
 
 .nav-link.cta-button.active {
-    color: var(--color-black) !important;
+    color: var(--color-white) !important;
 }
 
 .nav-link.cta-button.active::after {
@@ -170,6 +170,7 @@ body {
     position: relative;
     padding-top: 80px;
     overflow: hidden;
+    background: #ffffff;
 }
 
 .hero-background {
@@ -178,7 +179,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, rgba(249, 115, 22, 0.07) 0%, transparent 70%);
     z-index: 0;
 }
 
@@ -188,7 +189,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    background: linear-gradient(180deg, transparent 0%, rgba(250, 250, 250, 0.6) 100%);
 }
 
 .hero-content {
@@ -204,11 +205,11 @@ body {
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 1.5rem;
-    color: var(--color-white);
+    color: var(--color-black);
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-light));
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -242,13 +243,13 @@ body {
 
 .btn-primary {
     background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 .btn-primary:hover {
     background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold));
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 10px 30px rgba(249, 115, 22, 0.35);
 }
 
 .btn-secondary {
@@ -259,9 +260,9 @@ body {
 
 .btn-secondary:hover {
     background: var(--color-gold);
-    color: var(--color-black);
+    color: var(--color-white);
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3);
 }
 
 .btn-outline {
@@ -272,7 +273,7 @@ body {
 
 .btn-outline:hover {
     background: var(--color-gold);
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 .btn-full {
@@ -324,36 +325,37 @@ body {
 }
 
 .section-dark {
-    background: var(--color-dark);
+    background: #ffffff;
     position: relative;
 }
 
-.section-dark::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(ellipse at top, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
-    pointer-events: none;
+.section-dark .section-title {
+    color: var(--color-gold);
+}
+
+.section-dark .section-description {
+    color: var(--color-text-light);
+}
+
+.section-dark .section-tag {
+    color: black;
 }
 
 .section-yellow {
-    background-color: #FFC847;
-    color: var(--color-black);
+    background-color: var(--color-gold);
+    color: var(--color-white);
 }
 
 .section-yellow .section-title {
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 .section-yellow .section-description {
-    color: #333333;
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .section-yellow .section-tag {
-    color: var(--color-dark);
+    color: black;
 }
 
 .section-header {
@@ -363,7 +365,7 @@ body {
 
 .section-tag {
     display: inline-block;
-    color: var(--color-gold);
+    color: black;
     font-weight: 600;
     font-size: 0.875rem;
     text-transform: uppercase;
@@ -374,7 +376,7 @@ body {
 .section-title {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
-    color: var(--color-white);
+    color: var(--color-gold);
     margin-bottom: 1rem;
 }
 
@@ -395,10 +397,11 @@ body {
 }
 
 .feature-card {
-    background: var(--color-dark-gray);
+    background: var(--color-white);
     padding: 2.5rem;
     border-radius: 20px;
-    border: 1px solid rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     transition: var(--transition);
     position: relative;
     overflow: hidden;
@@ -418,8 +421,8 @@ body {
 
 .feature-card:hover {
     transform: translateY(-10px);
-    border-color: var(--color-gold);
-    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.1);
+    border-color: rgba(249, 115, 22, 0.25);
+    box-shadow: 0 20px 40px rgba(249, 115, 22, 0.1);
 }
 
 .feature-card:hover::before {
@@ -435,7 +438,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 1.5rem;
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 .feature-icon svg {
@@ -445,7 +448,7 @@ body {
 
 .feature-card h3 {
     font-size: 1.5rem;
-    color: var(--color-white);
+    color: var(--color-black);
     margin-bottom: 1rem;
     font-weight: 600;
 }
@@ -465,32 +468,33 @@ body {
 }
 
 .benefit-card {
-    background: var(--color-gray);
+    background: var(--color-white);
     padding: 2.5rem;
     border-radius: 20px;
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     transition: var(--transition);
     position: relative;
 }
 
 .benefit-card:hover {
     transform: translateY(-5px);
-    border-color: var(--color-gold);
-    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
+    border-color: rgba(249, 115, 22, 0.25);
+    box-shadow: 0 15px 35px rgba(249, 115, 22, 0.12);
 }
 
 .benefit-number {
     font-size: 3rem;
     font-weight: 800;
     color: var(--color-gold);
-    opacity: 0.3;
+    opacity: 0.25;
     margin-bottom: 1rem;
     line-height: 1;
 }
 
 .benefit-card h3 {
     font-size: 1.5rem;
-    color: var(--color-white);
+    color: var(--color-black);
     margin-bottom: 1rem;
     font-weight: 600;
 }
@@ -514,7 +518,7 @@ body {
 .toggle-label {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--color-white);
+    color: var(--color-black);
     user-select: none;
 }
 
@@ -539,7 +543,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--color-gray);
+    background-color: var(--color-light-gray);
     transition: var(--transition);
     border-radius: 30px;
 }
@@ -565,7 +569,7 @@ body {
 }
 
 .pricing-toggle:hover .toggle-slider {
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 0 10px rgba(249, 115, 22, 0.3);
 }
 
 .annual-benefit {
@@ -574,7 +578,7 @@ body {
 }
 
 .benefit-text {
-    color: #22c55e;
+    color: #16a34a;
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -595,36 +599,37 @@ body {
 }
 
 .pricing-card {
-    background: var(--color-dark-gray);
-    border: 2px solid var(--color-gold);
+    background: var(--color-white);
+    border: 2px solid rgba(249, 115, 22, 0.3);
     border-radius: 25px;
     padding: 2.5rem;
     position: relative;
     transition: var(--transition);
     display: flex;
     flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .pricing-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 20px 50px rgba(249, 115, 22, 0.15);
 }
 
 .pricing-card-starter {
-    border-color: #b27100;
+    border-color: rgba(176, 113, 0, 0.3);
 }
 
 .pricing-card-plus {
     border-width: 3px;
-    border-color: #9f9f9f;
+    border-color: #d1d1d1;
 }
 
 .pricing-card-infinite {
-    border-color: #edea29;
+    border-color: rgba(249, 115, 22, 0.5);
 }
 
 .pricing-card.featured {
-    background: linear-gradient(135deg, var(--color-dark-gray), var(--color-gray));
+    background: linear-gradient(135deg, #fff8f5, #fff4ef);
     transform: scale(1.05);
 }
 
@@ -658,12 +663,12 @@ body {
     text-align: center;
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .pricing-header h3 {
     font-size: 1.75rem;
-    color: var(--color-white);
+    color: var(--color-black);
     margin-bottom: 1rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -685,17 +690,17 @@ body {
 .price-amount {
     font-size: 3rem;
     font-weight: 800;
-    color: var(--color-white);
+    color: var(--color-black);
     line-height: 1;
 }
 
 .pricing-card-starter .price-amount,
 .pricing-card-infinite .price-amount {
-    color: var(--color-white);
+    color: var(--color-black);
 }
 
 .pricing-card-plus .price-amount {
-    color: var(--color-white);
+    color: var(--color-black);
 }
 
 .price-period {
@@ -718,7 +723,7 @@ body {
 
 .pricing-highlight-yellow {
     background: var(--color-gold);
-    color: var(--color-dark-gray);
+    color: var(--color-white);
 }
 
 .pricing-highlight-red {
@@ -739,7 +744,7 @@ body {
 }
 
 .includes-label {
-    color: var(--color-white);
+    color: var(--color-black);
     font-weight: 700;
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
@@ -772,21 +777,21 @@ body {
     text-align: center;
     margin-bottom: 1.5rem;
     background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
-    color: var(--color-black);
+    color: var(--color-white);
     border: none;
 }
 
 .pricing-cta:hover {
     background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold));
-    color: var(--color-black);
+    color: var(--color-white);
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 10px 30px rgba(249, 115, 22, 0.35);
 }
 
 .pricing-details {
     margin-top: auto;
     padding-top: 1rem;
-    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .pricing-details p {
@@ -806,6 +811,7 @@ body {
     display: flex;
     align-items: start;
     gap: 0.75rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .check-icon {
@@ -819,9 +825,9 @@ body {
     text-align: center;
     margin-top: 3rem;
     padding: 1.5rem;
-    background: var(--color-dark-gray);
+    background: var(--color-gray);
     border-radius: 15px;
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.07);
 }
 
 .pricing-note p {
@@ -880,9 +886,10 @@ body {
 .stat-item {
     text-align: center;
     padding: 1.5rem;
-    background: var(--color-gray);
+    background: var(--color-white);
     border-radius: 15px;
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .stat-number {
@@ -904,12 +911,13 @@ body {
 }
 
 .visual-card {
-    background: var(--color-dark-gray);
+    background: var(--color-white);
     border: 2px solid var(--color-gold);
     border-radius: 25px;
     padding: 3rem;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 10px 40px rgba(249, 115, 22, 0.1);
 }
 
 .card-glow {
@@ -918,7 +926,7 @@ body {
     right: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(249, 115, 22, 0.06) 0%, transparent 70%);
     animation: rotate 20s linear infinite;
 }
 
@@ -940,7 +948,7 @@ body {
 
 .card-content h4 {
     font-size: 1.5rem;
-    color: var(--color-white);
+    color: var(--color-black);
     margin-bottom: 1rem;
     font-weight: 600;
 }
@@ -981,7 +989,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-black);
+    color: var(--color-white);
     flex-shrink: 0;
 }
 
@@ -991,7 +999,7 @@ body {
 }
 
 .contact-item h4 {
-    color: var(--color-white);
+    color: var(--color-black);
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
@@ -1014,10 +1022,10 @@ body {
 .form-group textarea {
     width: 100%;
     padding: 1rem 1.5rem;
-    background: var(--color-dark-gray);
-    border: 2px solid rgba(212, 175, 55, 0.2);
+    background: var(--color-white);
+    border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 12px;
-    color: var(--color-white);
+    color: var(--color-black);
     font-family: var(--font-primary);
     font-size: 1rem;
     transition: var(--transition);
@@ -1027,12 +1035,12 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--color-gold);
-    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: var(--color-text-light);
+    color: #aaaaaa;
 }
 
 .form-group textarea {
@@ -1044,8 +1052,8 @@ body {
    FOOTER
    ============================================ */
 .footer {
-    background: var(--color-dark);
-    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    background: var(--color-gray);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
     padding: 4rem 0 2rem;
 }
 
@@ -1069,7 +1077,7 @@ body {
 }
 
 .footer-column h4 {
-    color: var(--color-white);
+    color: var(--color-black);
     margin-bottom: 1rem;
     font-weight: 600;
 }
@@ -1095,12 +1103,12 @@ body {
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
     color: var(--color-text-light);
 }
 
 .footer-bottom a {
-    color: var(--color-white);
+    color: var(--color-black);
     text-decoration: none;
     font-weight: 600;
     transition: var(--transition);
@@ -1123,12 +1131,12 @@ body {
         top: 70px;
         left: -100%;
         flex-direction: column;
-        background: rgba(0, 0, 0, 0.98);
+        background: rgba(255, 255, 255, 0.99);
         width: 100%;
         padding: 2rem;
         gap: 1rem;
         transition: var(--transition);
-        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     }
 
     .nav-menu.active {
@@ -1347,15 +1355,15 @@ body {
    SERVICES SECTION
    ============================================ */
 .services-section {
-    background-color: var(--color-dark);
+    background-color: var(--color-white);
 }
 
 .services-table-container {
     overflow-x: auto;
-    background: var(--color-dark-gray);
+    background: var(--color-white);
     border-radius: 20px;
-    border: 1px solid rgba(212, 175, 55, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
     margin-top: 2rem;
 }
 
@@ -1368,13 +1376,13 @@ body {
 .services-table th {
     text-align: left;
     padding: 1.5rem;
-    background: rgba(212, 175, 55, 0.05);
+    background: rgba(249, 115, 22, 0.05);
     color: var(--color-gold);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.9rem;
-    border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+    border-bottom: 2px solid rgba(249, 115, 22, 0.15);
 }
 
 .services-table th.center-align,
@@ -1384,7 +1392,7 @@ body {
 
 .services-table td {
     padding: 1.25rem 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     color: var(--color-text-light);
     vertical-align: middle;
 }
@@ -1394,12 +1402,12 @@ body {
 }
 
 .services-table tr:hover td {
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(249, 115, 22, 0.02);
 }
 
 .service-name {
     font-weight: 600;
-    color: var(--color-white);
+    color: var(--color-black);
     font-size: 1rem;
 }
 
@@ -1418,7 +1426,7 @@ body {
 .check-circle {
     width: 30px;
     height: 30px;
-    background: rgba(212, 175, 55, 0.2);
+    background: rgba(249, 115, 22, 0.12);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1435,9 +1443,9 @@ body {
     margin-top: 2rem;
     text-align: center;
     padding: 1.5rem;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent);
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.07), transparent);
     border-radius: 15px;
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(249, 115, 22, 0.15);
 }
 
 .savings-text {
@@ -1455,12 +1463,11 @@ body {
    IMPACT STATS SECTION
    ============================================ */
 .impact-section {
-    background-color: #FFC847;
-    /* Warm yellow/orange from reference */
-    color: var(--color-black);
+    background-color: var(--color-gold);
+    color: var(--color-white);
     padding: 1.5rem 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .impact-header {
@@ -1468,7 +1475,7 @@ body {
     font-weight: 800;
     text-align: center;
     margin-bottom: 1.5rem;
-    color: var(--color-dark);
+    color: var(--color-white);
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
@@ -1495,8 +1502,7 @@ body {
 .impact-value {
     font-size: clamp(3rem, 6vw, 4.5rem);
     font-weight: 900;
-    color: #333333;
-    /* Dark gray for contrast */
+    color: var(--color-white);
     line-height: 1;
     margin-bottom: 0.5rem;
     display: block;
@@ -1506,7 +1512,7 @@ body {
 .impact-label {
     font-size: 0.95rem;
     font-weight: 600;
-    color: #444444;
+    color: rgba(255, 255, 255, 0.85);
     max-width: 180px;
     line-height: 1.4;
 }
@@ -1524,7 +1530,7 @@ body {
 }
 
 /* ============================================
-   RESPONSIVE SERVICES TABLE 
+   RESPONSIVE SERVICES TABLE
    ============================================ */
 @media (max-width: 768px) {
     .services-table-container {
@@ -1551,12 +1557,12 @@ body {
 
     .services-table tr {
         display: block;
-        background: var(--color-dark-gray);
+        background: var(--color-white);
         margin-bottom: 2rem;
         border-radius: 20px;
         padding: 2rem 1.5rem;
-        border: 1px solid rgba(212, 175, 55, 0.2);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(0, 0, 0, 0.07);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     }
 
     .services-table td {
@@ -1565,7 +1571,7 @@ body {
         align-items: center;
         padding: 1rem 0;
         text-align: right;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         width: 100%;
     }
 
@@ -1602,7 +1608,7 @@ body {
     .service-name {
         text-align: right;
         flex: 1;
-        color: var(--color-white);
+        color: var(--color-black);
         font-weight: 700;
         font-size: 1.1rem;
     }
@@ -1615,7 +1621,7 @@ body {
 
     /* Ensure check circle is visible */
     .check-circle {
-        background: rgba(212, 175, 55, 0.2);
+        background: rgba(249, 115, 22, 0.12);
         color: var(--color-gold);
         width: 35px;
         height: 35px;

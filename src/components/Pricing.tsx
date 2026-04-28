@@ -1,10 +1,66 @@
 "use client";
 
 import { useState } from "react";
-import { Check } from "lucide-react";
+import { Check, ChevronDown } from "lucide-react";
+
+const features = [
+    {
+        title: "Acceso a CRM y Automatizaciones",
+        items: [
+            "Pipeline de ventas visual",
+            "Automatizaciones ilimitadas (workflows)",
+            "Formularios y landing pages",
+            "Email marketing",
+            "Calendario de reservas"
+        ]
+    },
+    {
+        title: "Asistente Inteligente (OpenAI)",
+        items: [
+            "Chatbot automático para WhatsApp",
+            "Respuestas inteligentes 24/7",
+            "Clasificación y enrutamiento de leads",
+            "Generación de respuestas personalizadas"
+        ]
+    },
+    {
+        title: "Voz IA (ElevenLabs)",
+        items: [
+            "Conversión de texto a voz realista",
+            "Mensajes de voz automatizados para WhatsApp",
+            "Voces naturales en múltiples idiomas"
+        ]
+    },
+    {
+        title: "WhatsApp Business y Común",
+        items: [
+            "Conexión hasta 5 dispositivos sin costo",
+            "Mensajería masiva",
+            "Plantillas sin aprobación de META"
+        ]
+    },
+    {
+        title: "Calendario y Agenda",
+        items: [
+            "Integración con Google Calendar",
+            "Envío automático de recordatorios",
+            "Sincronización con disponibilidad real"
+        ]
+    },
+    {
+        title: "Automatizaciones Premium",
+        items: [
+            "Secuencias de seguimiento automáticas",
+            "Recordatorios de citas por WhatsApp",
+            "Respuesta automática a consultas comunes",
+            "Recordatorios de pago",
+            "Notificaciones de cambios de estado"
+        ]
+    }
+];
 
 export default function Pricing() {
-    const [isAnnual, setIsAnnual] = useState(false);
+    const [openFeature, setOpenFeature] = useState<number | null>(null);
 
     const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
         e.preventDefault();
@@ -18,35 +74,28 @@ export default function Pricing() {
         }
     };
 
+    const toggleFeature = (index: number) => {
+        setOpenFeature(openFeature === index ? null : index);
+    };
+
     return (
         <section id="planes" className="section">
             <div className="container" style={{ maxWidth: '650px' }}>
                 <div className="section-header">
                     <span className="section-tag">Inversión</span>
-                    <h2 className="section-title">Plan Único Ilimitado</h2>
+                    <h2 className="section-title">Precio Lanzamiento</h2>
                     <p className="section-description">
                         Lleva tu negocio al siguiente nivel con todas las herramientas y funcionalidades en un solo lugar.
                     </p>
                 </div>
 
-                {/* <div className="pricing-toggle-container">
-                    <span className="toggle-label">Mensual</span>
-                    <label className="pricing-toggle">
-                        <input type="checkbox" id="pricingToggle" checked={isAnnual} onChange={() => setIsAnnual(!isAnnual)} />
-                        <span className="toggle-slider"></span>
-                    </label>
-                    <span className="toggle-label">Anual <span style={{ color: '#22c55e', fontSize: '0.8rem', marginLeft: '5px' }}>Ahorra 16%</span></span>
-                </div> */}
-
                 <div className="pricing-grid" style={{ gridTemplateColumns: '1fr', marginTop: '2rem' }}>
                     <div className="pricing-card pricing-card-plus featured" style={{ padding: '2.5rem 2rem', transform: 'none' }}>
-                        <div className="pricing-header">
-                            <div className="pricing-price">
-                                <span className="price-amount" style={{ fontSize: '2.5rem' }}>Precio a convenir</span>
+                        <div className="pricing-header" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                            <div className="pricing-price" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem', width: '100%', textAlign: 'center' }}>
+                                <span className="price-amount" style={{ fontSize: '3.5rem', fontWeight: 800 }}>$119</span>
+                                <span style={{ fontSize: '1.2rem', color: 'var(--color-gold)', fontWeight: 600, marginTop: '0.5rem' }}>USD / mes</span>
                             </div>
-                            {/* <div className="annual-benefit" style={{ display: isAnnual ? "block" : "none", marginTop: '1rem' }}>
-                                <span className="benefit-text" style={{ fontSize: '0.9rem', padding: '0.4rem 1rem', background: 'rgba(34, 197, 94, 0.1)', borderRadius: '20px' }}>¡2 MESES GRATIS!</span>
-                            </div> */}
                         </div>
 
                         <p className="pricing-description" style={{ textAlign: 'center', fontSize: '1.1rem', marginBottom: '2.5rem' }}>
@@ -54,33 +103,58 @@ export default function Pricing() {
                         </p>
 
                         <div className="pricing-includes">
-                            <p className="includes-label" style={{ textAlign: 'center', marginBottom: '1.5rem', color: 'var(--color-gold)' }}>Todo lo que necesitas para crecer:</p>
-                            <ul className="pricing-features" style={{ maxWidth: '400px', margin: '0 auto 2.5rem auto' }}>
-                                <li>
-                                    <Check className="check-icon" size={20} />
-                                    <span>WhatsApp Integrado Omnicanal</span>
-                                </li>
-                                <li>
-                                    <Check className="check-icon" size={20} />
-                                    <span>Envíos de WhatsApps Masivos</span>
-                                </li>
-                                <li>
-                                    <Check className="check-icon" size={20} />
-                                    <span>Embudos de Ventas y Páginas Web</span>
-                                </li>
-                                <li>
-                                    <Check className="check-icon" size={20} />
-                                    <span>Agendamiento y Recordatorios Automáticos</span>
-                                </li>
-                                <li>
-                                    <Check className="check-icon" size={20} />
-                                    <span>Acceso Inmediato y Soporte Prioritario</span>
-                                </li>
-                                <li>
-                                    <Check className="check-icon" size={20} />
-                                    <span><strong>Usuarios y Contactos Ilimitados</strong></span>
-                                </li>
-                            </ul>
+                            <p className="includes-label" style={{ textAlign: 'center', marginBottom: '1.5rem', color: 'var(--color-gold)' }}>¿Qué incluye?</p>
+                            <div style={{ maxWidth: '450px', margin: '0 auto 2.5rem auto', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                                {features.map((feature, index) => (
+                                    <div key={index} style={{ border: '1px solid rgba(0, 0, 0, 0.08)', borderRadius: '12px', overflow: 'hidden', background: '#ffffff', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
+                                        <button
+                                            onClick={() => toggleFeature(index)}
+                                            style={{
+                                                width: '100%',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'space-between',
+                                                padding: '1rem',
+                                                background: 'transparent',
+                                                border: 'none',
+                                                color: '#1f2937',
+                                                cursor: 'pointer',
+                                                textAlign: 'left'
+                                            }}
+                                        >
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                                                <div style={{ background: 'rgba(34, 197, 94, 0.2)', padding: '4px', borderRadius: '50%' }}>
+                                                    <Check color="#22c55e" size={16} />
+                                                </div>
+                                                <span style={{ fontWeight: 600, fontSize: '1rem' }}>{feature.title}</span>
+                                            </div>
+                                            <ChevronDown
+                                                size={20}
+                                                style={{
+                                                    transition: 'transform 0.3s ease',
+                                                    transform: openFeature === index ? 'rotate(180deg)' : 'rotate(0deg)',
+                                                    color: '#9ca3af'
+                                                }}
+                                            />
+                                        </button>
+                                        <div style={{
+                                            display: 'grid',
+                                            gridTemplateRows: openFeature === index ? '1fr' : '0fr',
+                                            transition: 'grid-template-rows 0.3s ease-in-out'
+                                        }}>
+                                            <div style={{ overflow: 'hidden' }}>
+                                                <div style={{ padding: '0 1rem 1rem 3.25rem' }}>
+                                                    <ul style={{ listStyleType: 'disc', margin: 0, paddingLeft: '1rem', color: '#4b5563', fontSize: '0.9rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                                                        {feature.items.map((item, id) => (
+                                                            <li key={id}>{item}</li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
 
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
