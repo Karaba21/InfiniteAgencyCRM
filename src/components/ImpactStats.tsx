@@ -30,7 +30,7 @@ export default function ImpactStats() {
         <section className="impact-section">
             <div className="container">
                 <h2 className="section-header impact-header">
-                    ¿Qué Logran Los Negocios con Infinite Agency CRM?
+                    ¿Qué Logran Los Negocios con Antana IA?
                 </h2>
                 <div className="impact-grid">
                     {stats.map((stat, index) => (

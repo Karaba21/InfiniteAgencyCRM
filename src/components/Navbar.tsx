@@ -65,8 +65,8 @@ export default function Navbar() {
         <nav className="navbar" style={{ background: "white" }}>
             <div className="container">
                 <div className="nav-brand">
-                    <span className="brand-text">Infinite Agency</span>
-                    <span className="brand-accent">CRM</span>
+                    <span className="brand-text">ANTANA</span>
+                    <span className="brand-accent">IA</span>
                 </div>
                 <ul className={`nav-menu ${isMenuOpen ? "active" : ""}`} id="navMenu">
                     <li><a href="#inicio" className="nav-link" style={tapHighlightStyle} onClick={(e) => handleLinkClick(e, "#inicio")}>Inicio</a></li>

@@ -196,7 +196,7 @@ export default function Services() {
                     <span className="section-tag">NUESTRO SERVICIO</span>
                     <h2 className="section-title">Servicios de nuestro CRM</h2>
                     <p className="section-description">
-                        Con Infinite Agency CRM las posibilidades son infinitas
+                        Con Antana IA las posibilidades son infinitas
                     </p>
                 </div>
 

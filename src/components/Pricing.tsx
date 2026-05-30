@@ -92,9 +92,9 @@ export default function Pricing() {
                 <div className="pricing-grid" style={{ gridTemplateColumns: '1fr', marginTop: '2rem' }}>
                     <div className="pricing-card pricing-card-plus featured" style={{ padding: '2.5rem 2rem', transform: 'none' }}>
                         <div className="pricing-header" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                            <div className="pricing-price" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem', width: '100%', textAlign: 'center' }}>
-                                <span className="price-amount" style={{ fontSize: '3.5rem', fontWeight: 800 }}>$119</span>
-                                <span style={{ fontSize: '1.2rem', color: 'var(--color-gold)', fontWeight: 600, marginTop: '0.5rem' }}>USD / mes</span>
+                            <div className="pricing-price" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', width: '100%', textAlign: 'center' }}>
+                                <span style={{ fontSize: '1.5rem', color: '#9ca3af', textDecoration: 'line-through', fontWeight: 600, marginTop: '0.5rem' }}>198 USD/mes</span>
+                                <span className="price-amount" style={{ fontSize: '3.5rem', fontWeight: 800 }}>99 USD/mes</span>
                             </div>
                         </div>
 

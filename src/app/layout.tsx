@@ -7,21 +7,21 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.infiniteagencycrm.com'),
-  title: "Infinite Agency CRM - Soluciones CRM Personalizadas",
+  title: "Antana IA - Soluciones CRM Personalizadas",
   description: "Soluciones CRM completamente personalizadas. Tu marca, tu experiencia, sin que tus clientes sepan que existe otra tecnología detrás.",
-  keywords: ["CRM", "CRM Personalizado", "Infinite Agency CRM", "Software de gestión de clientes", "Marca blanca", "Agencia Infinite"],
-  authors: [{ name: "Infinite Agency CRM" }],
+  keywords: ["CRM", "CRM Personalizado", "Antana IA", "Software de gestión de clientes", "Marca blanca", "Antana IA"],
+  authors: [{ name: "Antana IA" }],
   openGraph: {
     type: "website",
     locale: "es_ES",
     url: "/",
-    title: "Infinite Agency CRM - Soluciones CRM Personalizadas",
+    title: "Antana IA - Soluciones CRM Personalizadas",
     description: "Soluciones CRM completamente personalizadas. Tu marca, tu experiencia, sin que tus clientes sepan que existe otra tecnología detrás.",
-    siteName: "Infinite Agency CRM",
+    siteName: "Antana IA",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Infinite Agency CRM - Soluciones CRM Personalizadas",
+    title: "Antana IA - Soluciones CRM Personalizadas",
     description: "Soluciones CRM completamente personalizadas. Tu marca, tu experiencia, sin que tus clientes sepan que existe otra tecnología detrás.",
   },
   robots: {

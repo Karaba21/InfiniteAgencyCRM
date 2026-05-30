@@ -37,7 +37,7 @@ export default function Savings() {
                                 <th>Funcionalidad</th>
                                 <th className="center-align">Herramientas Tradicionales</th>
                                 <th className="center-align">Otras Herramientas</th>
-                                <th className="center-align" style={{ color: 'var(--color-gold)' }}>Infinite Agency CRM</th>
+                                <th className="center-align" style={{ color: 'var(--color-gold)' }}>Antana IA</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -46,7 +46,7 @@ export default function Savings() {
                                     <td className="service-name" data-label="Funcionalidad">{service.name}</td>
                                     <td className="competitors-list center-align" data-label="Herramientas Tradicionales">{service.competitors}</td>
                                     <td className="cost-list center-align" data-label="Otras Herramientas" style={{ fontWeight: 'bold' }}>{service.cost}</td>
-                                    <td data-label="Infinite Agency CRM">
+                                    <td data-label="Antana IA">
                                         <div className="infinite-check">
                                             <div className="check-circle">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
