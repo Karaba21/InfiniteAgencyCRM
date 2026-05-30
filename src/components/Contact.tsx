@@ -16,7 +16,7 @@ export default function Contact() {
             return;
         }
 
-        let whatsappMessage = `¡Hola! Me interesa conocer más sobre Antana IA.\n\n`;
+        let whatsappMessage = `¡Hola! Me interesa conocer más sobre Ananta IA.\n\n`;
         whatsappMessage += `*Nombre:* ${name}\n`;
         whatsappMessage += `*Email:* ${email}\n`;
         if (company) whatsappMessage += `*Empresa:* ${company}\n`;

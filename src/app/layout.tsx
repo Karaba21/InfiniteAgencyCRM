@@ -1,27 +1,32 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  weight: ["500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.infiniteagencycrm.com'),
-  title: "Antana IA - Soluciones CRM Personalizadas",
+  title: "Ananta IA - Soluciones CRM Personalizadas",
   description: "Soluciones CRM completamente personalizadas. Tu marca, tu experiencia, sin que tus clientes sepan que existe otra tecnología detrás.",
-  keywords: ["CRM", "CRM Personalizado", "Antana IA", "Software de gestión de clientes", "Marca blanca", "Antana IA"],
-  authors: [{ name: "Antana IA" }],
+  keywords: ["CRM", "CRM Personalizado", "Ananta IA", "Software de gestión de clientes", "Marca blanca", "Ananta IA"],
+  authors: [{ name: "Ananta IA" }],
   openGraph: {
     type: "website",
     locale: "es_ES",
     url: "/",
-    title: "Antana IA - Soluciones CRM Personalizadas",
+    title: "Ananta IA - Soluciones CRM Personalizadas",
     description: "Soluciones CRM completamente personalizadas. Tu marca, tu experiencia, sin que tus clientes sepan que existe otra tecnología detrás.",
-    siteName: "Antana IA",
+    siteName: "Ananta IA",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Antana IA - Soluciones CRM Personalizadas",
+    title: "Ananta IA - Soluciones CRM Personalizadas",
     description: "Soluciones CRM completamente personalizadas. Tu marca, tu experiencia, sin que tus clientes sepan que existe otra tecnología detrás.",
   },
   robots: {
@@ -54,7 +59,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" className={spaceGrotesk.variable}>
       <head>
         {/* Google Tag Manager */}
       </head>

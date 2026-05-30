@@ -50,7 +50,7 @@ export default function About() {
                         <h2 className="section-title">Quiénes Somos</h2>
                         <div className="about-description">
                             <p>
-                                En <strong>Antana IA</strong>, somos especialistas en transformar
+                                En <strong>Ananta IA</strong>, somos especialistas en transformar
                                 soluciones tecnológicas existentes en productos completamente personalizados
                                 bajo tu marca.
                             </p>

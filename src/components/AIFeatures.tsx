@@ -25,7 +25,7 @@ const aiFeatures = [
     },
     {
         title: "Integración Rápida en 1 Minuto",
-        description: "Escanea el código QR, conecta tu teléfono y visualiza todos tus mensajes de WhatsApp directamente en tu cuenta de Antana IA.",
+        description: "Escanea el código QR, conecta tu teléfono y visualiza todos tus mensajes de WhatsApp directamente en tu cuenta de Ananta IA.",
         icon: <ArrowRight color="#22c55e" size={32} />
     },
     {

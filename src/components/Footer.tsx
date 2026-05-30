@@ -19,7 +19,7 @@ export default function Footer() {
                 <div className="footer-content">
                     <div className="footer-brand">
                         <div className="brand-text">
-                            <span>Antana IA</span>
+                            <span>Ananta IA</span>
                         </div>
                         <p>Transformando tecnologías en soluciones personalizadas para tu éxito.</p>
                     </div>
@@ -52,7 +52,7 @@ export default function Footer() {
                 </div>
                 <div className="footer-bottom">
                     <p>Diseñado y desarrollado por <a href="https://savsolutionsuy.com"> Sav Solutions</a></p>
-                    <p>&copy; 2026 Antana IA. Todos los derechos reservados.</p>
+                    <p>&copy; 2026 Ananta IA. Todos los derechos reservados.</p>
                 </div>
             </div>
         </footer>
