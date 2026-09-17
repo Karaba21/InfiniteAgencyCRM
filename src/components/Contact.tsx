@@ -1,8 +1,10 @@
 "use client";
 
 import { FormEvent } from "react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function Contact() {
+    const { t } = useLanguage();
     const handleFormSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
@@ -12,7 +14,6 @@ export default function Contact() {
         const message = formData.get("message") as string;
 
         if (!name || !email || !message) {
-            alert("Por favor, completa todos los campos requeridos.");
             return;
         }
 
@@ -25,8 +26,7 @@ export default function Contact() {
         const encodedMessage = encodeURIComponent(whatsappMessage);
         const whatsappUrl = `https://wa.me/59896671516?text=${encodedMessage}`;
 
-        window.open(whatsappUrl, "_blank");
-        alert("¡Redirigiendo a WhatsApp! Completa el envío del mensaje allí.");
+        window.open(whatsappUrl, "_blank", "noopener,noreferrer");
         (e.target as HTMLFormElement).reset();
     };
 
@@ -34,10 +34,10 @@ export default function Contact() {
         <section id="contacto" className="section">
             <div className="container">
                 <div className="section-header">
-                    <span className="section-tag">Hablemos</span>
-                    <h2 className="section-title">Contacta con Nosotros</h2>
+                    <span className="section-tag">{t.contact.tag}</span>
+                    <h2 className="section-title">{t.contact.title}</h2>
                     <p className="section-description">
-                        ¿Listo para transformar tu CRM? Solicita una demo o consulta sin compromiso
+                        {t.contact.description}
                     </p>
                 </div>
                 <div className="contact-content">
@@ -49,8 +49,8 @@ export default function Contact() {
                                 </svg>
                             </div>
                             <div>
-                                <h4>Email</h4>
-                                <p>infiniteagencycrm@gmail.com</p>
+                                <h4>{t.contact.emailLabel}</h4>
+                                <p><a href="mailto:ananta.ia.uy@gmail.com">ananta.ia.uy@gmail.com</a></p>
                             </div>
                         </div>
                         <div className="contact-item">
@@ -60,25 +60,25 @@ export default function Contact() {
                                 </svg>
                             </div>
                             <div>
-                                <h4>Teléfono</h4>
+                                <h4>{t.contact.phoneLabel}</h4>
                                 <p>+598 96 671 516</p>
                             </div>
                         </div>
                     </div>
                     <form className="contact-form" id="contactForm" onSubmit={handleFormSubmit}>
                         <div className="form-group">
-                            <input type="text" name="name" id="name" placeholder="Tu Nombre" required />
+                            <input type="text" name="name" id="name" placeholder={t.contact.namePlaceholder} required />
                         </div>
                         <div className="form-group">
-                            <input type="email" name="email" id="email" placeholder="Tu Email" required />
+                            <input type="email" name="email" id="email" placeholder={t.contact.emailPlaceholder} required />
                         </div>
                         <div className="form-group">
-                            <input type="text" name="company" id="company" placeholder="Empresa (opcional)" />
+                            <input type="text" name="company" id="company" placeholder={t.contact.companyPlaceholder} />
                         </div>
                         <div className="form-group">
-                            <textarea name="message" id="message" rows={5} placeholder="Cuéntanos sobre tu proyecto" required></textarea>
+                            <textarea name="message" id="message" rows={5} placeholder={t.contact.messagePlaceholder} required></textarea>
                         </div>
-                        <button type="submit" className="btn btn-primary btn-full">Enviar Mensaje</button>
+                        <button type="submit" className="btn btn-primary btn-full">{t.contact.submitButton}</button>
                     </form>
                 </div>
             </div>

@@ -1,9 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { language, setLanguage, t } = useLanguage();
     const tapHighlightStyle = { WebkitTapHighlightColor: "transparent" } as React.CSSProperties;
 
     useEffect(() => {
@@ -69,13 +71,34 @@ export default function Navbar() {
                     <span className="brand-accent">IA</span>
                 </div>
                 <ul className={`nav-menu ${isMenuOpen ? "active" : ""}`} id="navMenu">
-                    <li><a href="#inicio" className="nav-link" style={tapHighlightStyle} onClick={(e) => handleLinkClick(e, "#inicio")}>Inicio</a></li>
-                    <li><a href="#servicios" className="nav-link" style={tapHighlightStyle} onClick={(e) => handleLinkClick(e, "#servicios")}>Servicios</a></li>
-                    <li><a href="#ia-features" className="nav-link" style={tapHighlightStyle} onClick={(e) => handleLinkClick(e, "#ia-features")}>IA</a></li>
-                    <li><a href="#beneficios" className="nav-link" style={tapHighlightStyle} onClick={(e) => handleLinkClick(e, "#beneficios")}>Beneficios</a></li>
-                    <li><a href="#planes" className="nav-link" style={tapHighlightStyle} onClick={(e) => handleLinkClick(e, "#planes")}>Costos</a></li>
-                    <li><a href="#savings" className="nav-link" style={tapHighlightStyle} onClick={(e) => handleLinkClick(e, "#savings")}>Ahorros</a></li>
-                    <li><a href="#contacto" className="nav-link cta-button" style={tapHighlightStyle} onClick={(e) => handleLinkClick(e, "#contacto")}>Contacto</a></li>
+                    <li><a href="#inicio" className="nav-link" style={tapHighlightStyle} onClick={(e) => handleLinkClick(e, "#inicio")}>{t.nav.inicio}</a></li>
+                    <li><a href="#servicios" className="nav-link" style={tapHighlightStyle} onClick={(e) => handleLinkClick(e, "#servicios")}>{t.nav.servicios}</a></li>
+                    <li><a href="#ia-features" className="nav-link" style={tapHighlightStyle} onClick={(e) => handleLinkClick(e, "#ia-features")}>{t.nav.ia}</a></li>
+                    <li><a href="#beneficios" className="nav-link" style={tapHighlightStyle} onClick={(e) => handleLinkClick(e, "#beneficios")}>{t.nav.beneficios}</a></li>
+                    <li><a href="#planes" className="nav-link" style={tapHighlightStyle} onClick={(e) => handleLinkClick(e, "#planes")}>{t.nav.costos}</a></li>
+                    <li><a href="#savings" className="nav-link" style={tapHighlightStyle} onClick={(e) => handleLinkClick(e, "#savings")}>{t.nav.ahorros}</a></li>
+                    <li><a href="#contacto" className="nav-link cta-button" style={tapHighlightStyle} onClick={(e) => handleLinkClick(e, "#contacto")}>{t.nav.demo}</a></li>
+                    <li className="lang-switch" role="group" aria-label="Language switcher">
+                        <button
+                            type="button"
+                            className={`lang-switch-btn ${language === "es" ? "active" : ""}`}
+                            style={tapHighlightStyle}
+                            aria-pressed={language === "es"}
+                            onClick={() => setLanguage("es")}
+                        >
+                            ES
+                        </button>
+                        <span className="lang-switch-divider">/</span>
+                        <button
+                            type="button"
+                            className={`lang-switch-btn ${language === "en" ? "active" : ""}`}
+                            style={tapHighlightStyle}
+                            aria-pressed={language === "en"}
+                            onClick={() => setLanguage("en")}
+                        >
+                            EN
+                        </button>
+                    </li>
                 </ul>
                 <button className="menu-toggle" id="menuToggle" style={tapHighlightStyle} onClick={toggleMenu}>
                     <span style={{ transform: isMenuOpen ? "rotate(45deg) translateY(7px)" : "none" }}></span>

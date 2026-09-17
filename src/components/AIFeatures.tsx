@@ -1,69 +1,36 @@
 "use client";
 
 import { MessageCircle, Settings, Globe, ArrowRight, CircleDollarSign, ArrowLeftRight, FileCheck, Ban, AlignEndVertical, Bot } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
-const aiFeatures = [
-    {
-        title: "Vincular Números Ilimitados",
-        description: "Vincula tus primeros 5 dispositivos WhatsApp sin cargo adicional.",
-        icon: <MessageCircle color="#22c55e" size={32} />
-    },
-    {
-        title: "Integración con OpenAI",
-        description: "Crea tu propio Agente de IA para automatizar el primer contacto, seguimiento, recordatorios de citas y gestión de ausencias.",
-        icon: <Bot color="#F97316" size={32} />
-    },
-    {
-        title: "Automatizaciones en WhatsApp",
-        description: "Elige entre envíos manuales o recordatorios mediante IA por WhatsApp.",
-        icon: <Settings color="#9ca3af" size={32} />
-    },
-    {
-        title: "Cualquier Código de País",
-        description: "Utiliza números locales para generar mayor confianza en tus prospectos.",
-        icon: <Globe color="#9ca3af" size={32} />
-    },
-    {
-        title: "Integración Rápida en 1 Minuto",
-        description: "Escanea el código QR, conecta tu teléfono y visualiza todos tus mensajes de WhatsApp directamente en tu cuenta de Ananta IA.",
-        icon: <ArrowRight color="#22c55e" size={32} />
-    },
-    {
-        title: "IA de Voz con ElevenLabs",
-        description: "Responde enviando notas de voz de forma manual o automáticamente mediante la integración con ElevenLabs.",
-        icon: <AlignEndVertical color="#F97316" size={32} />
-    },
-    {
-        title: "Sin Costos Adicionales",
-        description: "Una tarifa única que incluye mensajes ilimitados sin cobros sorpresa.",
-        icon: <CircleDollarSign color="#eab308" size={32} />
-    },
-    {
-        title: "Sincronización Bidireccional",
-        description: "Los mensajes enviados y recibidos desde tu teléfono se sincronizan automáticamente en tiempo real con el CRM.",
-        icon: <ArrowLeftRight color="#9ca3af" size={32} />
-    },
-    {
-        title: "Sin Aprobaciones de Plantillas",
-        description: "Enviá mensajes libremente sin necesitar aprobación previa de plantillas de la API oficial de WhatsApp.",
-        icon: <FileCheck color="#22c55e" size={32} />
-    },
-    {
-        title: "Sin Límite de 24 Horas",
-        description: "Enviá mensajes promocionales en cualquier momento sin la restricción de la ventana de 24 horas.",
-        icon: <Ban color="#ef4444" size={32} />
-    }
+const aiFeatureIcons = [
+    <MessageCircle key="0" color="#22c55e" size={32} />,
+    <Bot key="1" color="#F97316" size={32} />,
+    <Settings key="2" color="#9ca3af" size={32} />,
+    <Globe key="3" color="#9ca3af" size={32} />,
+    <ArrowRight key="4" color="#22c55e" size={32} />,
+    <AlignEndVertical key="5" color="#F97316" size={32} />,
+    <CircleDollarSign key="6" color="#eab308" size={32} />,
+    <ArrowLeftRight key="7" color="#9ca3af" size={32} />,
+    <FileCheck key="8" color="#22c55e" size={32} />,
+    <Ban key="9" color="#ef4444" size={32} />,
 ];
 
 export default function AIFeatures() {
+    const { t } = useLanguage();
+    const aiFeatures = t.aiFeatures.items.map((feature, index) => ({
+        ...feature,
+        icon: aiFeatureIcons[index],
+    }));
+
     return (
         <section id="ia-features" className="section section-dark">
             <div className="container" style={{ position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
                 <div className="section-header">
-                    <span className="section-tag">INTELIGENCIA ARTIFICIAL</span>
-                    <h2 className="section-title">Integración con IA</h2>
+                    <span className="section-tag">{t.aiFeatures.tag}</span>
+                    <h2 className="section-title">{t.aiFeatures.title}</h2>
                     <p className="section-description">
-                        Lleva tus comunicaciones al siguiente nivel automatizando interacciones y flujos de trabajo con nuestras herramientas de Inteligencia Artificial.
+                        {t.aiFeatures.description}
                     </p>
                 </div>
 

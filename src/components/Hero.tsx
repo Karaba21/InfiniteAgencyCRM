@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect } from "react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function Hero() {
+    const { t } = useLanguage();
     useEffect(() => {
         const handleScroll = () => {
             const heroContent = document.querySelector(".hero-content") as HTMLElement;
@@ -70,15 +72,15 @@ export default function Hero() {
             <div className="container">
                 <div className="hero-content">
                     <h1 className="hero-title">
-                        <span>Convertí</span><span style={{color: '#29b05a'}}> Whatsapp</span>
-                        <br />en tu mejor <span className="gradient-text">vendedor</span>
+                        <span>{t.hero.titlePrefix}</span><span style={{color: '#29b05a'}}>{t.hero.titleWhatsapp}</span>
+                        <br />{t.hero.titleMiddle}<span className="gradient-text">{t.hero.titleHighlight}</span>
                     </h1>
                     <p className="hero-subtitle">
-                        Automatizá atención, turnos y seguimientos desde WhatsApp 24/7 <br /> Y mucho más
+                        {t.hero.subtitleLine1} <br /> {t.hero.subtitleLine2}
                     </p>
                     <div className="hero-buttons">
-                        <a href="#planes" className="btn btn-primary" onClick={(e) => handleLinkClick(e, "#planes")}>Ver Planes</a>
-                        <a href="#contacto" className="btn btn-secondary" onClick={(e) => handleLinkClick(e, "#contacto")}>Solicitar Demo</a>
+                        <a href="#planes" className="btn btn-primary" onClick={(e) => handleLinkClick(e, "#planes")}>{t.hero.ctaPrimary}</a>
+                        <a href="#contacto" className="btn btn-secondary" onClick={(e) => handleLinkClick(e, "#contacto")}>{t.hero.ctaSecondary}</a>
                     </div>
                 </div>
             </div>
