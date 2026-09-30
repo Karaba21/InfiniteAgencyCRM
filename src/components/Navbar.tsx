@@ -71,10 +71,9 @@ export default function Navbar() {
                     <Image
                         src="/logo-ananta-png.png"
                         alt="Ananta IA"
-                        width={160}
+                        width={180}
                         height={60}
                         priority
-                        style={{ height: "60px", width: "auto" }}
                     />
                 </div>
                 <ul className={`nav-menu ${isMenuOpen ? "active" : ""}`} id="navMenu">
