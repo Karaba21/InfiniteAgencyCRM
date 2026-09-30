@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function Navbar() {
@@ -67,8 +68,14 @@ export default function Navbar() {
         <nav className="navbar" style={{ background: "white" }}>
             <div className="container">
                 <div className="nav-brand">
-                    <span className="brand-text">ANANTA</span>
-                    <span className="brand-accent">IA</span>
+                    <Image
+                        src="/logo-ananta-png.png"
+                        alt="Ananta IA"
+                        width={160}
+                        height={60}
+                        priority
+                        style={{ height: "60px", width: "auto" }}
+                    />
                 </div>
                 <ul className={`nav-menu ${isMenuOpen ? "active" : ""}`} id="navMenu">
                     <li><a href="#inicio" className="nav-link" style={tapHighlightStyle} onClick={(e) => handleLinkClick(e, "#inicio")}>{t.nav.inicio}</a></li>

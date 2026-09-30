@@ -182,7 +182,7 @@ export const en: Translations = {
         title: "Launch Price",
         description: "Take your business to the next level with all the tools and features in one place.",
         oldPrice: "139 USD/month",
-        newPrice: "99 USD/month",
+        newPrice: "79 USD/month",
         pricingDescription: "Automate your sales and marketing by combining the undeniable power of WhatsApp with advanced Artificial Intelligence.",
         includesLabel: "What's included?",
         cta: "GET ACCESS NOW!",
