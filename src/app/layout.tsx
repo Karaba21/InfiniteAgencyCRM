@@ -14,21 +14,21 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.infiniteagencycrm.com'),
   title: "Ananta IA - Soluciones CRM Personalizadas",
-  description: "Soluciones CRM completamente personalizadas. Tu marca, tu experiencia, sin que tus clientes sepan que existe otra tecnología detrás.",
-  keywords: ["CRM", "CRM Personalizado", "Ananta IA", "Software de gestión de clientes", "Marca blanca", "Ananta IA"],
+  description: "Soluciones CRM completamente personalizadas para potenciar las ventas de tu empresa.",
+  keywords: ["CRM", "CRM Personalizado", "Ananta IA", "Software de gestión de clientes"],
   authors: [{ name: "Ananta IA" }],
   openGraph: {
     type: "website",
     locale: "es_ES",
     url: "/",
     title: "Ananta IA - Soluciones CRM Personalizadas",
-    description: "Soluciones CRM completamente personalizadas. Tu marca, tu experiencia, sin que tus clientes sepan que existe otra tecnología detrás.",
+    description: "Soluciones CRM completamente personalizadas para potenciar las ventas de tu empresa.",
     siteName: "Ananta IA",
   },
   twitter: {
     card: "summary_large_image",
     title: "Ananta IA - Soluciones CRM Personalizadas",
-    description: "Soluciones CRM completamente personalizadas. Tu marca, tu experiencia, sin que tus clientes sepan que existe otra tecnología detrás.",
+    description: "Soluciones CRM completamente personalizadas para potenciar las ventas de tu empresa.",
   },
   robots: {
     index: true,
