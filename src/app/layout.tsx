@@ -24,11 +24,20 @@ export const metadata: Metadata = {
     title: "Ananta IA - Soluciones CRM Personalizadas",
     description: "Soluciones CRM completamente personalizadas para potenciar las ventas de tu empresa.",
     siteName: "Ananta IA",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1805,
+        height: 847,
+        alt: "Ananta IA - Soluciones CRM Personalizadas",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Ananta IA - Soluciones CRM Personalizadas",
     description: "Soluciones CRM completamente personalizadas para potenciar las ventas de tu empresa.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
