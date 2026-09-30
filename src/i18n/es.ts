@@ -245,7 +245,7 @@ export const es: Translations = {
     savings: {
         tag: "Todo en Uno",
         title: "Sustituye Múltiples Herramientas",
-        description: "Deja de pagar cientos de dólares mensuales en diferentes suscripciones. Con InfiniteAgencyCRM tienes todo lo que necesitas en una sola plataforma.",
+        description: "Deja de pagar cientos de dólares mensuales en diferentes suscripciones. Con Ananta IA tienes todo lo que necesitas en una sola plataforma.",
         tableHeaders: {
             feature: "Funcionalidad",
             traditional: "Herramientas Tradicionales",

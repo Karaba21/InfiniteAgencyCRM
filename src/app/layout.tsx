@@ -12,7 +12,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.infiniteagencycrm.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://anantaia.com'),
   title: "Ananta IA - Soluciones CRM Personalizadas",
   description: "Soluciones CRM completamente personalizadas para potenciar las ventas de tu empresa.",
   keywords: ["CRM", "CRM Personalizado", "Ananta IA", "Software de gestión de clientes"],

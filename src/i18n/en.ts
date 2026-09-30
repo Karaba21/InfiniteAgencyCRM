@@ -245,7 +245,7 @@ export const en: Translations = {
     savings: {
         tag: "All in One",
         title: "Replace Multiple Tools",
-        description: "Stop paying hundreds of dollars a month across different subscriptions. With InfiniteAgencyCRM you have everything you need in a single platform.",
+        description: "Stop paying hundreds of dollars a month across different subscriptions. With Ananta IA you have everything you need in a single platform.",
         tableHeaders: {
             feature: "Feature",
             traditional: "Traditional Tools",

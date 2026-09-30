@@ -47,7 +47,7 @@ export default function Footer() {
                         <div className="footer-column">
                             <h4>{t.footer.contactColumn}</h4>
                             <ul>
-                                <li><a href="mailto:infiniteagencycrm@gmail.com">{t.footer.email}</a></li>
+                                <li><a href="mailto:ananta.ia.uy@gmail.com">{t.footer.email}</a></li>
                                 <li><a href="#contacto" onClick={(e) => handleLinkClick(e, "#contacto")}>{t.footer.requestDemo}</a></li>
                             </ul>
                         </div>
